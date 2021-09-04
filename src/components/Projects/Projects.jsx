@@ -28,7 +28,21 @@ const Projects = () => {
         <div className="project-wrapper">
           <Title title="Projects" />
           {projects.map((project) => {
-            const { title, info, info2, url, repo, img, id } = project;
+            const {
+              title,
+              vue,
+              javascript,
+              html,
+              css,
+              php,
+              mysql,
+              info,
+              info2,
+              url,
+              repo,
+              img,
+              id,
+            } = project;
 
             return (
               <Row key={id}>
@@ -41,22 +55,29 @@ const Projects = () => {
                     distance="30px"
                   >
                     <div className="project-wrapper__text">
-                      <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
+                      <h3 className="project-wrapper__text-title">{title || ''}</h3>
                       <div>
-                        <p>
-                          {info ||
-                            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
-                        </p>
+                        <p>{info || ''}</p>
+                        <div className="badge badge-rounded badge-vue">{vue || ''}</div>
+                        <div className="badge badge-rounded badge-javascript">
+                          {javascript || ''}
+                        </div>
+                        <div className="badge badge-rounded badge-html">{html || ''}</div>
+                        <div className="badge badge-rounded badge-css">{css || ''}</div>
+                        <div className="badge badge-rounded badge-mysql">{mysql || ''}</div>
+                        <div className="badge badge-rounded badge-php">{php || ''}</div>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
-                      >
-                        See Live
-                      </a>
+                      {url && (
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cta-btn cta-btn--hero"
+                          href={url}
+                        >
+                          See Live
+                        </a>
+                      )}
 
                       {repo && (
                         <a

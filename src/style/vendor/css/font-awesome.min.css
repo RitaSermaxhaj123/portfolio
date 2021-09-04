@@ -2329,3 +2329,27 @@
   overflow: visible;
   clip: auto;
 }
+.badge-vue {
+  background-color: rgb(82, 161, 82);
+}
+.badge-html {
+  background-color: rgb(236, 87, 18);
+}
+.badge-css {
+  background-color: rgb(60, 63, 201);
+}
+.badge-javascript {
+  background-color: rgb(255, 239, 19);
+}
+.badge-mysql {
+  background-color: rgb(148, 148, 148);
+}
+.badge-php {
+  background-color: rgb(124, 91, 177);
+}
+.badge {
+  margin-right: 3px;
+  padding: 5px;
+  color: white;
+  border-radius: 20px;
+}
